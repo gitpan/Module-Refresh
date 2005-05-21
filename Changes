@@ -1,0 +1,33 @@
+0.06 Fri May 20 22:11:11 EDT 2005
+
+  * Trade overrefreshing for underrefreshing in some cases; test and document
+    (We were over-aggressively reloading modules
+     -- David Glasser
+
+
+0.05 Tue Nov 16 23:15:10 EST 2004
+
+  * Explicitly, don't clobber the 'VERSION' symbol on setup.
+
+0.04 Thu Nov 11 12:53:21 CST 2004
+ 
+  * Fix tests to run correctly on Win32.
+
+0.03 Wed Nov 10 21:30:59 CST 2004
+
+  * "Anonymize" all our methods so we can refresh ourselves.
+  * POD cleanup; nomenclature unification.
+  * ->refresh now implicitly calls ->new for the first time.
+  
+   minor doc updates
+  
+  * Various cleanups to make it 5.005-friendly.
+  * Use (inode, size, mtime) as the cache value instead of mtime alone.
+  
+0.02 Wed Nov 10 18:28:12 CST 2004
+
+    - Now we clean out subroutines loaded by the package we're unloading. 
+
+0.01 Mon Nov  8 19:48:00 CST 2004
+
+    - Initial release
