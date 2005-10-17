@@ -14,7 +14,7 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 dde29b17f75eb4b60f9dd6726952bceaced3a9f0 Changes
+SHA1 876d62d29e6e01f5f694fb95adfb4ec3140820bb Changes
 SHA1 bfc39e0aa86b3dae153290cb4cbf5a89126f9f97 MANIFEST
 SHA1 b7486e3cbe8cb200c626c9c5c8e0a16b13affb0c META.yml
 SHA1 31ee17518f4f173948f13c6813015f204220cf4e Makefile.PL
@@ -26,14 +26,14 @@ SHA1 836dc65ebcb2913f5a7da77ddba4b6d46bd98f99 inc/Module/Install/Makefile.pm
 SHA1 2d0fae3f1ecf71666075b39911cb4694b1310edd inc/Module/Install/Metadata.pm
 SHA1 71c0f2e04d98c302c22d92b03ab8852f768b6431 inc/Module/Install/Win32.pm
 SHA1 ea6fe523768b5c7d8a50528fbc18885bb0901d88 inc/Module/Install/WriteAll.pm
-SHA1 bb4489c137f0289dddf832eb4176a0783308bc6e lib/Module/Refresh.pm
+SHA1 6027cd3ac5037547bd26788b80108d287da22505 lib/Module/Refresh.pm
 SHA1 59ee3fb5cc33fa83f37010c6f1bbffc96169c3d4 t/0-smoke.t
 SHA1 137ccc7076368e1352b53e7f318b6cdd42b03b27 t/1api.t
 SHA1 8ffa4282d866ed021030a9211685af1ccd3325cd t/2lateuse.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjpkDEi9d9xCOQEYRAo1LAJwOoRxohnjsIs9BTABNEBQq+LQREgCbB7qq
-XrW54Rv4cmneei7GDx3IC0o=
-=bAJ+
+iD8DBQFDUyVoEi9d9xCOQEYRApe1AJ9dcMRQF8aRGCtfuauO7Zj78MtASQCgtRfd
+KVEW0TOQH1rYv3IZhjTRAf8=
+=PAoU
 -----END PGP SIGNATURE-----

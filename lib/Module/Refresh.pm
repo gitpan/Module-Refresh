@@ -3,10 +3,17 @@ package Module::Refresh;
 use strict;
 use vars qw( $VERSION %CACHE );
 
-$VERSION = "0.06";
+$VERSION = "0.08";
 
-# Turn on the debugger's symbol source tracing
-BEGIN { $^P |= 0x10 };
+BEGIN { 
+    # Turn on the debugger's symbol source tracing
+    $^P |= 0x10;
+
+    # Work around bug in pre-5.8.7 perl where turning on $^P
+    # causes caller() to be confused about eval {}'s in the stack.
+    # (See http://rt.perl.org/rt3/Ticket/Display.html?id=35059 for more info.)
+    eval 'sub DB::sub' if $] < 5.008007;
+}
 
 =head1 NAME
 
@@ -151,7 +158,8 @@ sub unload_subs {
         grep { index( $DB::sub{$_}, "$file:" ) == 0 } keys %DB::sub
     ) {
         warn "Deleting $sym from $file" if ($sym =~ /freeze/);
-        undef &$sym;
+        eval { undef &$sym };
+        warn "$sym: $@" if $@;
         delete $DB::sub{$sym};
     }
 
