@@ -3,9 +3,9 @@
 use strict;
 
 use Test::More qw/no_plan/;
-use File::Spec;
+use File::Temp 'tempdir';
+my $tmp = tempdir( CLEANUP => 1 );
 
-my $tmp = File::Spec->tmpdir;
 my $file = $tmp."/".'FooBar.pm';
 push @INC, $tmp;
 
@@ -54,6 +54,10 @@ sub write_out {
     open FH, "> $file" or die "Cannot open $file: $!";
     print FH $_[0];
     close FH;
+}
+
+END {
+    unlink $file;
 }
 
 
